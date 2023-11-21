@@ -6,7 +6,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 
-@CucumberOptions(tags = "" ,features = "src/test/resources/feature", glue = "stepDefinition1", plugin = {"pretty", "json:./reports/cucumber-reports/index.json", "html:/reports/cucumber-reports/index.html","rerun:target/failed.txt", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
+@CucumberOptions(tags = "" ,features = "src/test/resources/feature", glue = "stepDefinition1", plugin = {"json:target/cucumber-report.json", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
 public class Testrunner  extends AbstractTestNGCucumberTests {
 	 
